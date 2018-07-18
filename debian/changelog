@@ -1,0 +1,29 @@
+clip-libvserver (4.1.4-1) unstable; urgency=low
+
+  * New upstream release.  
+
+ -- Olivier Levillain <clipos@ssi.gouv.fr>  Wed, 14 Sep 2011 16:23:56 +0200
+
+clip-libvserver (4.1.1) unstable; urgency=low
+
+  * debian/control:
+    - add myself to uploaders.
+    - update standards version to 3.9.2.
+    - add build-dep on hardening-includes.
+    - add build-dep on libtool, linux-headers-2.6-vserver-amd64.
+    - add depends on ${misc:Depends}.
+    - rename binary packages to match soname
+  * debian/rules:
+    - pick build flags from dpkg-buildflags.
+    - add hardening flags to build flags.
+    - add -O1, -z,defs and --as-needed to LDFLAGS.
+    - pass --with-kernel-includes to configure so it can find the vserver
+      kernel headers. 
+
+ -- Yves-Alexis Perez <clipos@ssi.gouv.fr>  Wed, 25 May 2011 15:33:56 +0200
+
+clip-libvserver (4.1.0) unstable; urgency=low
+
+  * Debian packaging
+
+ -- Olivier Levillain <clipos@ssi.gouv.fr>  Fri, 12 Nov 2010 16:26:00 +0100

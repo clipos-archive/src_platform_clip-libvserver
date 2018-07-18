@@ -1,0 +1,23 @@
+Source: clip-libvserver
+Priority: extra
+Maintainer: Olivier Levillain <clipos@ssi.gouv.fr>
+Uploaders: Yves-Alexis Perez <clipos@ssi.gouv.fr>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, hardening-includes, libtool, linux-headers-2.6-vserver-amd64
+Standards-Version: 3.9.2
+Section: libs
+
+Package: libclipvserver-dev
+Section: libdevel
+Architecture: any
+Depends: libclipvserver4 (= ${binary:Version}), ${misc:Depends}
+Description: Vserver library used in CLIP
+ This library contains useful wrappers around vserver syscalls.
+
+Package: libclipvserver4
+Section: libs
+Breaks: clip-libvserver
+Replaces: clip-libvserver
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Vserver library used in CLIP
+ This library contains useful wrappers around vserver syscalls.

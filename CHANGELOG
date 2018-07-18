@@ -1,0 +1,196 @@
+# ChangeLog for <clip-libs>/<clip-lib>
+
+*clip-libvserver-4.1.9 (15 Feb 2017)
+
+  15 Feb 2017; Timothée Ravier <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.9.ebuild, -clip-libvserver-4.1.8.ebuild:
+  Set 'kernel-includes' default to uapi folder.
+
+*clip-libvserver-4.1.8 (14 Feb 2017)
+
+  14 Feb 2017; Timothée Ravier <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.8.ebuild, -clip-libvserver-4.1.7.ebuild:
+  Include vserver uapi headers instead of kernel internal ones.
+
+  29 Jan 2016; Yves-Alexis Perez <clipos@ssi.gouv.fr>
+  clip-libvserver-4.1.7.ebuild:
+  Run autoreconf, helps with libtool updates.
+
+*clip-libvserver-4.1.7 (26 Feb 2014)
+
+  26 Feb 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.7.ebuild, -clip-libvserver-4.1.6.ebuild:
+  Merge ASTRIUM patch - switch to v1 kernel API for net operations,
+  support an arbitrary number of addresses.
+  Remove net-ns USE flag, activate net-ns support systematically.
+
+*clip-libvserver-4.1.6 (05 Feb 2014)
+
+  05 Feb 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.6.ebuild, -clip-libvserver-4.1.5.ebuild:
+  Add clip_enter_security_context().
+
+*clip-libvserver-4.1.5 (29 Feb 2012)
+
+  29 Feb 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.5.ebuild, -clip-libvserver-4.1.4.ebuild:
+  Improved support for net-ns. Add net context configuration
+  interface.
+
+*clip-libvserver-4.1.4 (24 Aug 2011)
+
+  24 Aug 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.4.ebuild, -clip-libvserver-4.1.3.ebuild:
+  Set better default namespace options for clip_jailself() and 
+  clip_new_context().
+
+*clip-libvserver-4.1.3 (29 Jul 2011)
+
+  29 Jul 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.3.ebuild, -clip-libvserver-4.1.2.ebuild:
+  Fix terminal proxy to not try to send SIGWINCH to every process
+  on earth...
+
+*clip-libvserver-4.1.2 (05 Jul 2011)
+
+  05 Jul 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.2.ebuild, -clip-libvserver-4.1.1.ebuild:
+  Make USER namespace use optional.
+
+*clip-libvserver-4.1.1 (05 May 2011)
+
+  05 May 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.1.ebuild, -clip-libvserver-4.1.0.ebuild:
+  Add clip_enter_context_nons().
+
+*clip-libvserver-4.1.0 (19 Jan 2011)
+
+  19 Jan 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.1.0.ebuild, -clip-libvserver-4.0.11.ebuild:
+  Support net / pid namespace usage.
+
+*clip-libvserver-4.0.11 (03 Jan 2011)
+
+  03 Jan 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.11.ebuild, -clip-libvserver-4.0.10.ebuild:
+  Use IPC namespace by default.
+
+*clip-libvserver-4.0.10 (09 Aug 2010)
+
+  09 Aug 2010; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.10.ebuild, -clip-libvserver-4.0.9.ebuild:
+  Fix build with newer kernel sources.
+
+*clip-libvserver-4.0.9 (02 Oct 2009)
+
+  02 Oct 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.9.ebuild, -clip-libvserver-4.0.8.ebuild:
+  Merge patches from BIS QUICKWIN audit.
+
+*clip-libvserver-4.0.8 (30 Apr 2009)
+
+  30 Apr 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.8.ebuild, -clip-libvserver-4.0.7.ebuild:
+  Fix tests that used to depend on util-vserver.
+
+*clip-libvserver-4.0.7 (20 Apr 2009)
+
+  20 Apr 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.7.ebuild, -clip-libvserver-4.0.6.ebuild:
+  Bump. Port to 2.6.28 kernel.
+
+*clip-libvserver-4.0.6 (18 Mar 2009)
+
+  18 Mar 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.6.ebuild, -clip-libvserver-4.0.5.ebuild:
+  Fix GCC-4 warnings.
+
+*clip-libvserver-4.0.5 (14 May 2008)
+
+  14 May 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.5.ebuild, -clip-libvserver-4.0.4.ebuild:
+  Add doxygen documentation generation.
+
+  07 Nov 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  Remove stale ebuilds before 4.0.4.
+
+*clip-libvserver-4.0.4 (24 Sep 2007)
+
+  24 Sep 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.4.ebuild:
+  Small add-on to clip_jailself : add MS_RDONLY|MS_NODEV to 
+  recursive root bind. 
+  New testing framework, and tests for every public function.
+
+*clip-libvserver-4.0.3 (03 Aug 2007)
+
+  03 Aug 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.3.ebuild:
+  Bump, removed dependency on util-vserver : vserver
+  syscalls are now coded in the library. That way we don't have to 
+  document util-vserver :)
+  Added clip_set_iattr() function to API.
+  
+*clip-libvserver-4.0.2 (10 Jul 2007)
+
+  10 Jul 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.2.ebuild:
+  Bump, add new_net_multi() call that accepts several addresses
+  and masks.
+
+*clip-libvserver-4.0.1 (04 Jul 2007)
+
+  04 Jul 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.1.ebuild:
+  Added new code to setup a terminal proxy, largely based on 
+  util-vserver's vlogin.
+  
+*clip-libvserver-3.0.2 (25 Apr 2007)
+
+  25 Apr 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-3.0.2.ebuild:
+  Compat 'hack', works with util-vserver-0.30.210 and does not 
+  break lib version for xdm (libclipvserver.so.3 rather than .so.4).
+  Note that the API has indeed changed, but not where it matters 
+  for xdm (clip_jailself).
+  
+*clip-libvserver-4.0 (20 Apr 2007)
+
+  20 Apr 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-4.0.ebuild:
+  Bump, new, enhanced API, allows entering an existing context, 
+  and setting up nflags and ccaps on new ones. Needed for vsctl.
+  Note : the clip_jailself entry point hasn't changed prototype,
+  so xdm should work without any fuss except for the relinking.
+  Hey, two bumps on the same day :)
+
+*clip-libvserver-3.0.1 (20 Apr 2007)
+
+  20 Apr 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-3.0.1.ebuild:
+  Bump, works with util-vserver-0.30.212.
+  
+*clip-libvserver-3.0 (26 Mar 2007)
+
+  26 Mar 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-3.0.ebuild:
+  API change : pass addresses and masks as char * rather than ints.
+
+*clip-libvserver-2.0.1 (06 Mar 2007)
+
+  06 Mar 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-2.0.1.ebuild:
+  Bump, better default CFLAGS.
+
+*clip-libvserver-2.0 (10 Jan 2007)
+
+  10 Jan 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-2.0.ebuild:
+  Complete rewrite, based on util-vserver's API, rather than that of
+  libvserver.
+
+*clip-libvserver-1.0 (21 Sep 2006)
+  
+  21 Sep 2006; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-libvserver-1.0.ebuild:
+  Initial import, code moved from clip-lib-1.1.1.
